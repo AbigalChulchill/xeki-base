@@ -1,0 +1,49 @@
+{% extends "_base.html" %}
+{% block content %}
+{{ parent() }}
+
+
+<section class="container sectionIndex">
+ //section
+</section>
+
+
+
+{% endblock %}
+{% block scripts %}
+{{ parent() }}
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('.sliderPrin').owlCarousel({
+      nav: false,
+      loop: true,
+      items: 1,
+      singleItem: true,
+      transitionStyle: "fadeUp",
+      items: 1,
+      autoplay: true,
+      autoPlaySpeed: 5000,
+      autoPlayTimeout: 5000,
+      autoplayHoverPause: false,
+    });
+    $('.sliderPrinNoNav').owlCarousel({
+      nav: false,
+      loop: true,
+      items: 1,
+      singleItem: true,
+      transitionStyle: "fadeUp",
+      items: 1,
+      autoplay: true,
+      autoPlaySpeed: 5000,
+      autoPlayTimeout: 5000,
+      autoplayHoverPause: false,
+    });
+    $('.flex_slide').flexslider({
+      controlNav: false,
+    });
+
+  });
+</script>
+
+{% endblock %}
